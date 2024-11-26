@@ -1,0 +1,1 @@
+{"conv_channels": [32, 32, 32], "kernel_sizes": [3, 3, 3], "strides": [1, 1, 1], "paddings": [1, 1, 1], "pooling": "max", "pool_kernels": [2, 2, 2], "encoder_hidden_dims": [32, 16], "latent_dim": 3, "decoder_hidden_dims": [8, 16, 32], "weights_seed": 123, "learning_rate": 0.0001, "n_epochs": 10}
