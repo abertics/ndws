@@ -3,10 +3,10 @@
 Based on the dataset of Huot et al; [GitHub repo here](https://github.com/google-research/google-research/tree/master/simulation_research/next_day_wildfire_spread). 
 This modified dataset is at higher spatial resolution and integrates more features, including fuel, than the original release of Huot et al. 
 
-For more information on the dataset, see the presentation `slides/ndws_overview.pdf`. 
+For more information on the dataset, see the presentation `slides/ndws_overview.pdf`. The dataset is available on Kaggle: [https://www.kaggle.com/datasets/georgehulsey/modified-next-day-wildfire-spread](https://www.kaggle.com/datasets/georgehulsey/modified-next-day-wildfire-spread).
 
 ## Getting started (training models)
-To start training models on the currently exported version of the dataset, first create a virtual environment using the included environment.yml file. Next, navigate to the public Google Cloud bucket associated with the project: [modified_ndws](https://console.cloud.google.com/storage/browser/modified_ndws). The dataset is in the folder `ndws_west_conus_dataset` and is composed of TfRecord and TfIndex files. Download the dataset to a local folder. 
+To start training models on the currently exported version of the dataset, first create a virtual environment using the included environment.yml file. Next, navigate to the public Google Cloud bucket associated with the project: [modified_ndws](https://console.cloud.google.com/storage/browser/modified_ndws). The dataset is in the folder `ndws_west_conus_dataset` and is composed of TfRecord and TfIndex files. Download the dataset to a local folder. **The dataset can also be accessed via Kaggle, linked just above.**
 
 Datasets and models are loaded using a loading utility function for ease of experimentation. The file `ndws_data_config.py` loads the TfRecord dataset into torch tensors that are training-ready. It offers many options for data augmentation, rescaling, and other operations on the raw data. 
 
