@@ -5,6 +5,27 @@ This modified dataset is at higher spatial resolution and integrates more featur
 
 For more information on the dataset, see the presentation `slides/ndws_overview.pdf`. The dataset is available on Kaggle: [https://www.kaggle.com/datasets/georgehulsey/modified-next-day-wildfire-spread](https://www.kaggle.com/datasets/georgehulsey/modified-next-day-wildfire-spread).
 
+## What I did to get things to work
+1. Create conda environment
+```
+$ conda env create -f environment.yml 
+```
+2. Create folder for data
+```
+$ mkdir ndws_western_dataset
+```
+3. Download data zip from [Kaggle](https://www.kaggle.com/datasets/georgehulsey/modified-next-day-wildfire-spread) (~4.3GB)
+```
+$ curl -L -o ./ndws_western_dataset/ndws.zip\
+https://www.kaggle.com/api/v1/datasets/download
+/georgehulsey/modified-next-day-wildfire-spread
+```
+4. Unzip data (108 total files of type .tfrecord and .tfindex)
+```
+unzip ndws_western_dataset/ndws.zip
+```
+5. Use model_training.ipynb.
+
 ## Getting started (training models)
 To start training models on the currently exported version of the dataset, first create a virtual environment using the included environment.yml file. Next, navigate to the public Google Cloud bucket associated with the project: [modified_ndws](https://console.cloud.google.com/storage/browser/modified_ndws). The dataset is in the folder `ndws_west_conus_dataset` and is composed of TfRecord and TfIndex files. Download the dataset to a local folder. **The dataset can also be accessed via Kaggle, linked just above.**
 
